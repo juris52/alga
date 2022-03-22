@@ -1,11 +1,11 @@
-bruto=int(input("Cik ir Jûsu bruto mçneðalga? "))
+bruto=int(input("Cik ir Jūsu bruto mēnešalga? "))
 if bruto>1666.67:
     ien=0.23
 else:
     ien=0.2
-gr=int(input("Vai Jums ir algas nodokïu grâmatiòa? 1- Nç; 2- Jâ: "))
+gr=int(input("Vai Jums ir algas nodokļu grāmatiņa? 1- Nē; 2- Jā: "))
 if gr==2:
-    cl=int(input("Cik cilvçkus Jûs apgâdâjat? " ))
+    cl=int(input("Cik cilvēkus Jūs apgādājat? " ))
     soc=bruto*0.105
     pn=bruto-soc
     if (pn-175-250*cl)>0:
@@ -20,6 +20,6 @@ else:
     pn=bruto-soc
     nd=pn*ien
     na=pn-nd
-print("Jûsu NETO alga bûs", na,"eiro")
-print("No Jûsu bruto algas", soc,"eiro aizgaja sociâlajos nodokïos")
-print("No Jûsu bruto algas", nd,"eiro aizgâja ienâkumu nodokïos")
+print("Jūsu NETO alga būs", na,"eiro")
+print("No Jūsu bruto algas", soc,"eiro aizgāja sociālajos nodokļos")
+print("No Jūsu bruto algas", nd,"eiro aizgāja ienākumu nodokļos")
