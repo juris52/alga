@@ -1,11 +1,11 @@
-bruto=int(input("Cik ir Jûsu bruto mçneðalga? "))
+bruto=int(input("Cik ir JÃ»su bruto mÃ§neÃ°alga? "))
 if bruto>1666.67:
     ien=0.23
 else:
     ien=0.2
-gr=int(input("Vai Jums ir algas nodokïu grâmatiòa? 1- Nç; 2- Jâ: "))
+gr=int(input("Vai Jums ir algas nodokÃ¯u grÃ¢matiÃ²a? 1- NÃ§; 2- JÃ¢: "))
 if gr==2:
-    cl=int(input("Cik cilvçkus Jûs apgâdâjat? " ))
+    cl=int(input("Cik cilvÃ§kus JÃ»s apgÃ¢dÃ¢jat? " ))
     soc=bruto*0.105
     pn=bruto-soc
     if (pn-175-250*cl)>0:
@@ -16,10 +16,10 @@ if gr==2:
         na=pn
         nd=0
 else:
-    soc=a*0.105
+    soc=bruto*0.105
     pn=bruto-soc
     nd=pn*ien
-    na=pn-nd+175+250*cl
-print("Jûsu NETO alga bûs", na,"eiro")
-print("No Jûsu bruto algas", soc,"eiro aizgaja sociâlajos nodokïos")
-print("No Jûsu bruto algas", nd,"eiro aizgâja ienâkumu nodokïos")
+    na=pn-nd
+print("JÃ»su NETO alga bÃ»s", na,"eiro")
+print("No JÃ»su bruto algas", soc,"eiro aizgaja sociÃ¢lajos nodokÃ¯os")
+print("No JÃ»su bruto algas", nd,"eiro aizgÃ¢ja ienÃ¢kumu nodokÃ¯os")
