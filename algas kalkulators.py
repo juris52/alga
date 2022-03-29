@@ -26,6 +26,6 @@ for i in range (0,ska+1):
         pn=bruto-soc
         nd=pn*ien
         na=pn-nd
-    print("Jūsu NETO alga būs", na,"eiro")
+    print("Jūsu neto alga būs", na,"eiro")
     print("No Jūsu bruto algas", soc,"eiro aizgāja sociālajos nodokļos")
     print("No Jūsu bruto algas", nd,"eiro aizgāja ienākumu nodokļos")
