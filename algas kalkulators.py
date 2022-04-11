@@ -9,41 +9,51 @@ while p==1:
         for i in range (0,ska):
             o=1
             u=1
-            bruto=int(input("Cik ir Jūsu bruto mēnešalga? "))
-            if bruto>1666.67:
-                ien=0.23
-            else:
-                ien=0.2
-            while o==1:
-                gr=int(input("Vai Jums ir algas nodokļu grāmatiņa? 1- Nē; 2- Jā: "))
-                if gr==2:
-                    while u==1:
-                        cl=int(input("Cik cilvēkus Jūs apgādājat? " ))
-                        if cl<0:
-                            print("Lūdzu ievadiet nenegatīvu skaitli!")
-                        else:
-                            soc=reiz(bruto,0.105)
-                            pn=bruto-soc
-                            if (pn-175-250*cl)>0:
-                                nm=pn-175-250*cl
-                                nd=nm*ien
-                                na=nm-nd+175+250*cl
-                            else:
-                                na=pn
-                                nd=0
+            j=1
+            while j==1: 
+                bruto=int(input("Cik ir Jūsu bruto mēnešalga? "))
+                if bruto<500:
+                    print("Jūsu ievadītā bruto alga ir zem Latvijas minimālās algas!")
+                if bruto>1666.67:
+                        ien=0.23
+                        j=0
+                elif bruto>500 or bruto==500:
+                        ien=0.2
+                        j=0
+                        while o==1:
+                            gr=int(input("Vai Jums ir algas nodokļu grāmatiņa? 1- Nē; 2- Jā: "))
+                            if gr==2:
+                                while u==1:
+                                    cl=int(input("Cik cilvēkus Jūs apgādājat? " ))
+                                    if cl<0:
+                                        print("Lūdzu ievadiet nenegatīvu skaitli!")
+                                    else:
+                                        soc=reiz(bruto,0.105)
+                                        pn=bruto-soc
+                                        if (pn-175-250*cl)>0:
+                                            nm=pn-175-250*cl
+                                            nd=nm*ien
+                                            na=nm-nd+175+250*cl
+                                            u=0
+                                            o=1
+                                        else:
+                                            na=pn
+                                            nd=0
+                                            u=0        
+                                            o=0
+                            elif gr==1:
+                                soc=bruto*0.105
+                                pn=bruto-soc
+                                nd=reiz(pn,ien)
+                                na=pn-nd
                                 o=0
-                        u=0        
-                elif gr==1:
-                    soc=bruto*0.105
-                    pn=bruto-soc
-                    nd=reiz(pn,ien)
-                    na=pn-nd
-                    o=0
-                else:
-                    print("Lūdzu ievadiet 1 vai 2")
-            print("Jūsu neto alga būs", round(na,2),"eiro")
-            print("No Jūsu bruto algas", round(soc,2),"eiro aizgāja sociālajos nodokļos")
-            print("No Jūsu bruto algas", round(nd,2),"eiro aizgāja ienākumu nodokļos")
+                            else:
+                                print("Lūdzu ievadiet 1 vai 2")
+        print("___________________________________________________________")
+        print("Jūsu neto alga būs", round(na,2),"eiro")
+        print("No Jūsu bruto algas", round(soc,2),"eiro aizgāja sociālajos nodokļos")
+        print("No Jūsu bruto algas", round(nd,2),"eiro aizgāja ienākumu nodokļos")
+        print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
         p=0    
     elif ska<0:
         print("Lūdzu ievadiet nenegatīvu skaitli")
