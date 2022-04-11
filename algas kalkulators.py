@@ -20,7 +20,7 @@ while p==1:
                 elif bruto>500 or bruto==500:
                         ien=0.2
                         j=0
-                        while o==1:
+                while o==1:
                             gr=int(input("Vai Jums ir algas nodokļu grāmatiņa? 1- Nē; 2- Jā: "))
                             if gr==2:
                                 while u==1:
@@ -49,12 +49,14 @@ while p==1:
                                 o=0
                             else:
                                 print("Lūdzu ievadiet 1 vai 2")
-        print("___________________________________________________________")
-        print("Jūsu neto alga būs", round(na,2),"eiro")
-        print("No Jūsu bruto algas", round(soc,2),"eiro aizgāja sociālajos nodokļos")
-        print("No Jūsu bruto algas", round(nd,2),"eiro aizgāja ienākumu nodokļos")
-        print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
-        p=0    
+        
+                            print("___________________________________________________________")
+                            print("Jūsu neto alga būs", round(na,2),"eiro")
+                            print("No Jūsu bruto algas", round(soc,2),"eiro aizgāja sociālajos nodokļos")
+                            print("No Jūsu bruto algas", round(nd,2),"eiro aizgāja ienākumu nodokļos")
+                            print("‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾")
+                            p=0 
+                            o=0
     elif ska<0:
         print("Lūdzu ievadiet nenegatīvu skaitli")
     else:
